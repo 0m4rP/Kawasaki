@@ -41,7 +41,7 @@
 }
 
 .section-2 .moto {
-    width: 60%;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -187,6 +187,7 @@
     .section-2 .especificaciones {
         display: block;
         margin-left: 10%;
+        text-align: center;
     }
 
     .section-2 .especificaciones img {
@@ -200,6 +201,9 @@
     .section-3 .texto-1 {
         margin-left: 70px;
         font-size: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     #footer {
@@ -224,6 +228,13 @@
         display: flex;
         flex-direction: column;
     }
+
+    .section-4 .sparte1 img {
+        height: 277px;
+    }
+    .section-4 .sparte2 img {
+        height: 277px;
+    }
     
     .section-4 .sparte1 {
         display: block;
@@ -232,3 +243,21 @@
         display: block;
     }
 }
+
+@media (max-width: 1410px) {
+    .section-4 .sparte1 img {
+        height: 417px;
+    }
+    .section-4 .sparte2 img {
+        height: 397px;
+    }
+}
+@media (max-width: 1370px) {
+    .section-4 .sparte1 img {
+        height: 30vw;
+    }
+    .section-4 .sparte2 img {
+        height: 28vw;
+    }
+}
+

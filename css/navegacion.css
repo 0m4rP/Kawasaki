@@ -1,80 +1,272 @@
 /* --------------- BARRA DE NAVEGACION --------------- */
 
-header {
+:root {
+    --fondo1: #202020;
+    --fondo2: #ebebeb;
+    --fondo3: #d9d9d9;
+    --verde: #2EB000;
+}
+
+.header {
+    background-color: var(--fondo1);
+    height: 80px;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
 }
 
-header nav{
-    background-color: var(--fondo1);
-    width: 100%;
-    height: 100%;
+.header .nav{
     display: flex;
     justify-content: space-between;
+    background-color: var(--fondo1);
+    
+    margin: 0 auto;
+
     align-items: center;
     box-shadow: 0 5px 10px #767676;
+    
 }
 
-header nav .logos {
+.header .nav .logos {
     align-items: center;
     display: flex;
     margin-left: 60px;
 }
 
-header nav .logos .logo1 {
+.header .nav .logos .logo1 {
     width: 60px;
     margin: 10px 0;
 }
 
-header nav .logos .logo2 {
+.header .nav .logos .logo2 {
     width: 150px;
 }
 
-header nav ul {
+.header .nav .menu1 {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-menu-item {
+    line-height: 80px;
+    margin: 0 50px;
+    width: max-content;
+}
+
+.nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.nav-menu-link:hover {
+    color: var(--verde);
+    transition: .5s;
+}
+
+
+.nav-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    margin-right: 50px;
+    line-height: 60px;
+
+    display: none;
+
+    cursor: pointer;
+}
+
+a {
+    color: white;
+}
+
+a i {
+    color: var(--verde);
+}
+
+/* ------------------------------------ */
+
+.submenu-mini {
+    display: flex;
+    background-color: #2EB000;
+}
+
+.submenu-mini .menuItem {
+    list-style: none;
+    padding: 0;
+}
+
+.submenu-mini .menuItem .menuLink {
+    padding: 8px 30px;
+    border-radius: 3px;
+}
+
+.submenu-mini .menuItem .menuLink:hover {
+    background: var(--verde);
+}
+
+.flecha {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 17px;
+}
+/* actualmente en esta parte */
+@media (min-width: 1151px) {
+    .submenu-mini {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        top: 0;
+        
+        width: 100%;
+        padding: 20px 0;
+
+        transition: top .4s;
+    }
+
+    .submenu_visible {
+        left: 0;
+    }
+
+}
+/* ----------------- submenu -------------------- */
+/* .submenu-mini {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.submenu-mini .menuLink:hover {
+    background: #222;
+}
+ */
+
+
+
+
+/* importante esto de abajo  */
+/* .submenu-mini  {
+    height: 0;
+    overflow: visible;
+    transition: all .3s;
+}
+
+
+.submenu-mini .menuLink {
+    background: var(--fondo1);
+    padding: 20px;
+}
+
+.submenu-mini .menuLink:hover {
+    background-color: var(--verde);
+    color: var(--fondo3);
+}
+
+.mostrar {
+    margin-top: 0;
+}
+
+.container-submenu {
+    display: block;
+    flex-direction: column;
+} 
+
+@media (max-width: 1150px) {
+
+    .container-submenu {
+        position: relative;
+    }
+    
+    .submenu-mini {
+        position: absolute;
+        top: 60px;
+        width: 200px;
+        overflow: visible;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .container-submenu:hover .submenu-mini {
+        opacity: 1;
+        visibility: visible;
+    }
+}  */
+
+/* -------------- media del menu principal y responsive ------------ */
+@media (max-width: 1150px) {
+    .header {
+        height: 60px;
+    }
+
+    .menu1 {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        background-color: var(--fondo1);
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+
+        height: calc(100% - 60px);
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left .4s;
+    }
+
+    .nav-menu-item {
+        line-height: 70px;
+    }
+
+    .nav-menu-item:hover,
+    .nav-menu-link_active {
+        background: none;
+        color: aqua;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+
+}
+
+
+
+/* .header .nav ul {
     list-style: none;
     display: flex;
 }
 
-header nav ul li a {
+.header .nav ul li a {
     color: whitesmoke;
     text-decoration: none;
     padding: 0 40px;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Montserrat', sans-serif;
 }
 
-header nav ul li a i {
+.header .nav ul li a i {
     color: var(--verde);
     padding-left: 5px;
 }
 
-header nav button{
+.header .nav button{
     margin-right: 60px;
 }
 
-header .menu {
+.header .menu {
     display: none;
 }
-
-@media (max-width: 1085px) {
-    
-    header nav .menu1, .btn {
-        display: none;
-    }
-
-    header nav .menu {
-        display: flex;
-        width: 100px;
-    }
-
-    header nav .menu button {
-        text-decoration: none;
-        background-color: transparent;
-        border: none;
-    }
-
-    header nav .menu button i {
-        color: white;
-    } 
-}
+ */

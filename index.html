@@ -13,29 +13,31 @@
     <title>Kawasaki</title>
 </head>
 <body>
-    <header id="header">
-        <nav>
+    <header class="header">
+        <nav class="nav">
             <div class="logos">
                 <img class="logo1" src="img/logo2.png" alt="logo-kawasaki">
                 <img class="logo2" src="img/logo1.png" alt="logo-kawasaki">
             </div>
+
+            <button class="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
             <ul class="menu1">
-                <li class="menuItem container-submenu">
-                    <a href="#" class="menuLink submenu-btn">RACING<i class="fa-solid fa-chevron-down"></i></a>
-                    <ul class="submenu">
+                <li class="nav-menu-item" class="menuItem container-submenu" >
+                    <a href="#" class="nav-menu-link" class="menuLink submenu-btn" >RACING<i class="fa-solid fa-chevron-down"></i></a>
+                    <!-- <ul class="submenu-mini">
                         <li class="menuItem"><a href="#section-2" class="menuLink">H2R</a></li>
                         <li class="menuItem"><a href="#" class="menuLink">Z1000</a></li>
                         <li class="menuItem"><a href="#" class="menuLink">Z900</a></li>
-                    </ul>
+                    </ul> -->
                 </li>
-                <li><a href="#section-2">H2R NEW</a></li>
-                <li><a href="#footer">CONTACT</a></li>
-            </ul>
+                <li class="nav-menu-item"><a href="#section-2" class="nav-menu-link">H2R NEW</a></li>
+                <li class="nav-menu-item"><a href="#footer" class="nav-menu-link">CONTACT</a></li>
                 <button class="btn"><a href="#">INICIAR SESION</a></button>
-        
-            <div class="menu">
-                <button><i class="fa-solid fa-bars fa-2x"></i></button>
-            </div>
+            </ul>
+                
         </nav>
 
         
@@ -88,19 +90,19 @@
                 </div>
             </a>
             <a href="#section-4" class="contenedor">
-                <img id="img1" src="img/armador2.jpg" alt="400km">
+                <img id="img2" src="img/armador2.jpg" alt="400km">
                 <div class="overlay">
                     <p class="texto-oculto">PERFECTA PARTE FRONTAL</p>
                 </div>
             </a>
             <a href="#section-4" class="contenedor">
-                <img id="img1" src="img/armador3.jpeg" alt="400km">
+                <img id="img3" src="img/armador3.jpeg" alt="400km">
                 <div class="overlay">
                     <p class="texto-oculto">PERFECTA PARA RODAR</p>
                 </div>
             </a>
             <a href="#section-4" class="contenedor">
-                <img id="img1" src="img/armador4.jpeg" alt="400km">
+                <img id="img4" src="img/armador4.jpeg" alt="400km">
                 <div class="overlay">
                     <p class="texto-oculto">GRAN PODER EN SU MOTOR</p>
                 </div>
@@ -109,25 +111,25 @@
 
         <div class="sparte2">
             <a href="#section-4" class="contenedor">
-                <img id="img1" src="img/armador5.jpeg" alt="publicidad-moto">
+                <img id="img5" src="img/armador5.jpeg" alt="publicidad-moto">
                 <div class="overlay">
                     <p class="texto-oculto">SU DISEÑO CON ALERONES</p>
                 </div>
             </a>
             <a href="#section-4" class="contenedor">
-                <img id="img1" src="img/armador6.jpg" alt="moto-velocidad">
+                <img id="img6" src="img/armador6.jpg" alt="moto-velocidad">
                 <div class="overlay">
                     <p class="texto-oculto">VELOCIDAD MAXIMA DE 400KM/H</p>
                 </div>
             </a>
             <a href="#section-4" class="contenedor">
-                <img id="img1" src="img/armador7.jpg" alt="motor">
+                <img id="img7" src="img/armador7.jpg" alt="motor">
                 <div class="overlay">
-                    <p class="texto-oculto">CUENTA CON TURBO</p>
+                    <p class="texto-oculto">CUENTA CON SUPERCARGADOR</p>
                 </div>
             </a>
             <a href="#section-4" class="contenedor">
-                <img id="img1" src="img/armador8.jpg" alt="moto-velocidad">
+                <img id="img8" src="img/armador8.jpg" alt="moto-velocidad">
                 <div class="overlay">
                     <p class="texto-oculto">¡COMPRALA!</p>
                 </div>
@@ -168,6 +170,7 @@
         </div>
     </footer>
 
+    <script src="js/menu.js"></script>    
     <script src="js/script.js"></script>
 </body>
 </html>
