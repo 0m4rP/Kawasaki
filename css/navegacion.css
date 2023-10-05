@@ -89,25 +89,42 @@ a i {
     color: var(--verde);
 }
 
-/* ------------------------------------ */
+/* --------------sub-menu---------------------- */
 
-.submenu-mini {
-    display: flex;
-    background-color: #2EB000;
+.menu1 {
+    align-items: center;
 }
 
-.submenu-mini .menuItem {
-    list-style: none;
+.menu1 .dropdown {
+    position: relative;
+}
+
+.menu1 .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 54px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
     padding: 0;
+    
 }
 
-.submenu-mini .menuItem .menuLink {
-    padding: 8px 30px;
-    border-radius: 3px;
+.menu1 .dropdown-content li {
+    padding: 15px 0 15px 15px;
+    list-style: none;
+    width: auto;
+    transition: all .8s;
 }
 
-.submenu-mini .menuItem .menuLink:hover {
-    background: var(--verde);
+.menu1 .dropdown-content li:hover {
+    background-color: var(--verde);
+    padding: 25px;
+    z-index: 1000;
+}
+
+.menu1 .dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .flecha {
@@ -135,69 +152,7 @@ a i {
     }
 
 }
-/* ----------------- submenu -------------------- */
-/* .submenu-mini {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
 
-.submenu-mini .menuLink:hover {
-    background: #222;
-}
- */
-
-
-
-
-/* importante esto de abajo  */
-/* .submenu-mini  {
-    height: 0;
-    overflow: visible;
-    transition: all .3s;
-}
-
-
-.submenu-mini .menuLink {
-    background: var(--fondo1);
-    padding: 20px;
-}
-
-.submenu-mini .menuLink:hover {
-    background-color: var(--verde);
-    color: var(--fondo3);
-}
-
-.mostrar {
-    margin-top: 0;
-}
-
-.container-submenu {
-    display: block;
-    flex-direction: column;
-} 
-
-@media (max-width: 1150px) {
-
-    .container-submenu {
-        position: relative;
-    }
-    
-    .submenu-mini {
-        position: absolute;
-        top: 60px;
-        width: 200px;
-        overflow: visible;
-        z-index: 1000;
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    .container-submenu:hover .submenu-mini {
-        opacity: 1;
-        visibility: visible;
-    }
-}  */
 
 /* -------------- media del menu principal y responsive ------------ */
 @media (max-width: 1150px) {
@@ -244,29 +199,3 @@ a i {
 }
 
 
-
-/* .header .nav ul {
-    list-style: none;
-    display: flex;
-}
-
-.header .nav ul li a {
-    color: whitesmoke;
-    text-decoration: none;
-    padding: 0 40px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.header .nav ul li a i {
-    color: var(--verde);
-    padding-left: 5px;
-}
-
-.header .nav button{
-    margin-right: 60px;
-}
-
-.header .menu {
-    display: none;
-}
- */

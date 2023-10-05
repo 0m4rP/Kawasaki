@@ -83,15 +83,15 @@ a {
     margin-left: 200px;
     cursor: pointer;
     font-family: 'Permanent Marker', cursive;
-    transition: all 1s;
+    transition: all .8s;
 }
 
 .comprar:hover {
     background-color: var(--fondo1);
     color: var(--verde);
-    transition: all 1s;
+    transition: all .8s;
     z-index: 1;
-    padding: 22px 47px;
+    padding: 25px 49px;
 }
 
 /* ------------------- quinta section ---------------- */
