@@ -7,6 +7,8 @@
 
 body {
     background-color: #202020;
+    margin: 0;
+    padding: 0;
 }
 
 .boton {
@@ -32,3 +34,10 @@ body {
     color: var(--verde);
     transition: all .8s;
 }
+
+.h2r-3d{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
